@@ -5,14 +5,14 @@ var request = require('request'),
         .default('output', 'rides.geojson')
         .argv;
 
-var getRides = 'http://www.jonathanokeeffe.com/strava/ajaxGetRides.php5';
+var getRides = 'http://www.jonathanokeeffe.com/strava/ajaxV3GetActivities.php5';
 
 request.post(getRides, {
-    form: { rider: argv.rider }
+    form: { athlete: argv.athlete, activityType:"All" }
 }, function(err, resp, body) {
-    var rides = JSON.parse(body).rides;
+    var activities = JSON.parse(body).activities;
     var q = queue(4);
-    rides.forEach(function(r) {
+    activities.forEach(function(r) {
         q.defer(request,
             'http://www.jonathanokeeffe.com/strava/ajaxGetRidePoints.php5?ride=' + r);
     });

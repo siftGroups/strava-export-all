@@ -12,4 +12,4 @@ Right now uses [John Keefe](http://johnkeefe.net/)'s excellent [Multiple Ride Ma
 
 In which `3` is your rider ID, which you can get from your user profile page.
 
-    node index.js --rider=3
+    node index.js --athlete=3

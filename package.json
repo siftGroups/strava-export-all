@@ -7,15 +7,21 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-      "strava-export-all": "index.js"
+    "strava-export-all": "index.js"
   },
   "preferGlobal": true,
-  "repository": "git@github.com:tmcw/strava-export-all.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tmcw/strava-export-all.git"
+  },
   "author": "Tom MacWright <tom@macwright.org>",
   "license": "BSD",
   "dependencies": {
     "request": "~2.21.0",
     "optimist": "~0.5.2",
     "queue-async": "~1.0.3"
-  }
+  },
+  "readmeFilename": "README.md",
+  "gitHead": "3096df53f3c735ce2da12d4ad858de28e8b066db",
+  "devDependencies": {}
 }
